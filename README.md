@@ -1,2 +1,2 @@
 # face
-Fully Autonomous Crypto Ecosystem
+fully autonomous crypto ecosystem
