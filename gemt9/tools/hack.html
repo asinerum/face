@@ -5,7 +5,7 @@
 <title>ASINERUM DEFI: TOKEN HACKING MACHINE</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/fonts.css" rel="stylesheet" type="text/css"/>
-<link href="https://asinerum.github.io/project/gui/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/style.css" rel="stylesheet" type="text/css"/>
 <link href="https://cdn.jsdelivr.net/gh/asinerum/project/favicon.ico" rel="icon" type="image/x-icon"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/asinerum/project/scr/_axios.js"></script>
@@ -21,19 +21,20 @@
 <div class="center">
 <div class="vbox">
 <div class="center">
-<span class="vhead" id="_label_panelHeader">HACKER'S PANEL</span>
+<span class="vhead" id="_label_hack_panelHeader">HACKER'S PANEL</span>
 <br/>
 <br/>
-<div class="center" id="form_head"><div class="forward" data-action="DefiProgLoad" id="_button_refresh"></div></div>
-<select class="vb" data-change="DefiProgLoad" id="pro_token">
+<div class="center" id="form_head"><div class="forward" data-action="DefiHackProgLoad" id="_button_refresh"></div></div>
+<select class="vb" data-change="DefiHackProgLoad" id="pro_token">
  <option value="token">Select token to hack</option>
  <option value="GEMT9">GEMT?</option>
  <option value="NEMT9">NEMT?</option>
+ <option value="REMT9">REMT?</option>
 </select><br/>
-<input type="text" class="vb" data-change="DefiProgIdno" placeholder="Take the secret number" id="pro_id"/><br/>
-<div class="ob"><span id="_label_DefiProgAmt">My Token Sum</span> <span class="textwarn" id="pro_amt">?</span></div>
-<div class="ob"><span id="_label_DefiProgSum">Token Supply</span> <span class="textwarn" id="pro_sum">?</span></div>
-<div class="vbutton" data-action="DefiProgJoin" id="_button_DefiProgJoin">HACK</div><br/>
+<input type="text" class="vb" data-change="DefiHackProgIdno" placeholder="Take the secret number" id="pro_id"/><br/>
+<div class="ob"><span id="_label_hack_DefiProgAmt">My Token Sum</span> <span class="textwarn" id="pro_amt">?</span></div>
+<div class="ob"><span id="_label_hack_DefiProgSum">Token Supply</span> <span class="textwarn" id="pro_sum">?</span></div>
+<div class="vbutton" data-action="DefiHackProgJoin" id="_button_hack_DefiProgJoin">HACK</div><br/>
 <div class="center" id="form_status"><div class="backward" data-action="ClearInput" id="_button_check"></div></div>
 </div>
 </div>
@@ -42,10 +43,7 @@
 <br/>
 <div class="footer" id="_header_copyright">(C)</div>
 </div>
-<script src="https://cdn.jsdelivr.net/gh/asinerum/project/scr/hith.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/asinerum/project/scr/hghack.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/asinerum/project/menu.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/asinerum/project/scr/sith.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/asinerum/project/startGemt.js"></script>
 </body>
 </html>
