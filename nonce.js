@@ -19,17 +19,17 @@ const byt=function(hex){return(web3.utils.hexToBytes(hex))};
 const num=function(hex){return(web3.utils.hexToNumberString(hex))};
 const kek=function(sender,key,nonce){return(web3.utils.keccak256(web3.eth.abi.encodeParameters(['uint256','uint256','uint256'],[num(sender),key,nonce])))};
 const b2i=function(hex,n,i){n=big(0);hex=byt(hex);for(i=0;i<hex.length;i++){n=n.add(big(hex[i]).mul(big(16).pow(big(i*2)).add(big(1))))};return(n.toString())};
-const Nonce=function(sender,base,key,min,max,i,m){m=big(key).mod(big(base)).toString();for(i=min;i<=max;i++){if(m==big(b2i(kek(sender,key,i))).mod(big(base)).toString()){break}}return(i)};
+const Nonce=function(sender,base,key,min,max,i,m){m=big(key).mod(big(base)).toString();for(i=min;i<=max;i++){if(m==big(b2i(kek(sender,key,i))).mod(big(base)).toString()){return(i)}}return(0)};
 ////////////////////////////////////////////////////////////
 self.addEventListener('message',
 function(e){
  var msg;
  try{
-  msg = JSON.parse(e.data);
+  msg = e.data;
   msg = Nonce(msg.sender,msg.base,msg.key,msg.min,msg.max);
  }catch(err){
   msg = null;
  }
- self.postMessage(JSON.stringify({result:msg}));
+ self.postMessage({result:msg});
  self.close();
 },false);
