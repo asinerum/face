@@ -29,6 +29,6 @@ function(e){
  }catch(err){
   msg = null;
  }
- self.postmsg(JSON.stringify({result:msg}));
+ self.postMessage(JSON.stringify({result:msg}));
  self.close();
 },false);
