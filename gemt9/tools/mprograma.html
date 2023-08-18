@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<html lang="en">
+<head>
+<title>ASINERUM DEFI: GEMT? PROGRAMER'S PANEL</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/fonts.css" rel="stylesheet" type="text/css"/>
+<link href="https://asinerum.github.io/project/gui/bstyle.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/favicon.ico" rel="icon" type="image/x-icon"/>
+<script src="https://cdn.jsdelivr.net/gh/asinerum/project/base.js"></script>
+</head>
+<body class="group">
+<div class="body" id="body">
+<br/>
+<br/>
+<span class="vhead" id="_label_program_programer">PROGRAMER'S PANEL</span>
+<br/>
+<br/>
+<textarea class="vb" placeholder="keystore or private key" id="dig_keystore"></textarea><br/>
+<input type="password" class="vb" placeholder="passcode to unlock wallet" id="dig_passcode"/><br/>
+<div class="vbutton" data-action="DefiDigJoin" id="_button_dig_DefiJoin">UNLOCK WALLET</div><br/>
+<div class="ob"><span id="_label_dig_DefiAddress">WALLET</span> <span class="textwarn" id="dig_address">?</span></div>
+<div class="center" id="form_head"><div class="stop" data-action="DefiProgramProgRead" id="_button_refresh"></div></div>
+<input type="text" class="vb" data-change="DefiProgramProgIdno" placeholder="Progs Unique ID" id="pro_program_id"/><br/>
+<input type="text" class="vb" data-change="DefiProgramProgRate" placeholder="Annual Pct Rate" id="pro_program_apr"/><br/>
+<input type="text" class="vb" data-change="DefiProgramProgInit" placeholder="Initial Deposit" id="pro_program_gemt"/><br/>
+<div class="vbutton" data-action="DefiProgramProgOpenRaw" id="_button_program_DefiProgOpen">CREATE PROGRAM</div><br/>
+<div class="vbutton" data-action="DefiProgramProgStopRaw" id="_button_program_DefiProgStop">CANCEL PROGRAM</div><br/>
+<div class="vbutton" data-action="DefiProgramProgDrawRaw" id="_button_program_DefiProgDraw">WITHDRAW GEMT?</div><br/>
+<div class="center" id="form_status"><div class="play" data-action="ClearInput" id="_button_check"></div></div>
+<br/>
+<br/>
+</div>
+<script>
+window.onload=function(){
+promoteMenu();
+startGemtRpc();//bsc
+}
+</script>
+</body>
+</html>

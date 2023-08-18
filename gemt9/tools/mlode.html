@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="en">
+<head>
+<title>ASINERUM DEFI: GAME MACHINE</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/fonts.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/bstyle.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/favicon.ico" rel="icon" type="image/x-icon"/>
+<script src="https://cdn.jsdelivr.net/gh/asinerum/project/base.js"></script>
+</head>
+<body class="group">
+<div class="body" id="body">
+<br/>
+<br/>
+<span class="vhead" id="_label_hack_panelHeaderLode">JS LODE GAME MACHINE</span>
+<br/>
+<br/>
+<textarea class="vb" placeholder="keystore or private key" id="dig_keystore"></textarea><br/>
+<input type="password" class="vb" placeholder="passcode to unlock wallet" id="dig_passcode"/><br/>
+<div class="vbutton" data-action="DefiDigJoin" id="_button_dig_DefiJoin">UNLOCK WALLET</div><br/>
+<div class="ob"><span id="_label_dig_DefiAddress">WALLET</span> <span class="textwarn" id="dig_address">?</span></div>
+<div class="center" id="form_head"><div class="forward" data-action="DefiGameLodeLoad" id="_button_refresh"></div></div>
+<div class="ob"><span id="_label_hack_DefiGameDate">Game date</span> <span class="textwarn" id="pro_date">?</span></div>
+<select class="vb" id="lode_type">
+ <option selected value="DE">DE</option>
+ <option value="LO">LO</option>
+</select><br/>
+<select class="vb" data-change="DefiGameLodeLoad" id="lode_money">
+ <option selected value="GEMT9">GEMT9</option>
+</select><br/>
+<div class="center" id="lode_countdown">?</div>
+<input type="text" class="vb" placeholder="game selected numbers" data-change="DefiGameLodeNumStr" id="lode_numstr"/><br/>
+<input type="text" class="vb" placeholder="sum amount to deposit" data-change="DefiGameLodeAmount" id="lode_amount"/><br/>
+<div class="ob"><span id="_label_hack_DefiProgAmt">My Token Sum</span> <span class="textwarn" id="pro_amt">?</span></div>
+<div class="vbutton" data-action="DefiGameLodeJoinRaw" id="_button_GameTxPlay">PAY</div><br/>
+<div class="center" id="form_status"><div class="backward" data-action="ClearInput" id="_button_check"></div></div>
+<br/>
+<br/>
+</div>
+<script>
+window.onload=function(){
+promoteMenu();
+startGemtRpc();//bsc
+CountDown('pro_date','lode_countdown');
+}
+</script>
+</body>
+</html>
