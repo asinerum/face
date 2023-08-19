@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="en">
+<head>
+<title>ASINERUM DEFI: PAYING MACHINE</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/fonts.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/bstyle.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/favicon.ico" rel="icon" type="image/x-icon"/>
+<script src="https://cdn.jsdelivr.net/gh/asinerum/project/base.js"></script>
+</head>
+<body class="group">
+<div class="body" id="body">
+<br/>
+<br/>
+<span class="vhead" id="_label_hack_panelHeaderPay">JS PAYING MACHINE</span>
+<br/>
+<br/>
+<textarea class="vb" placeholder="keystore or private key" id="dig_keystore"></textarea><br/>
+<input type="password" class="vb" placeholder="passcode to unlock wallet" id="dig_passcode"/><br/>
+<div class="vbutton" data-action="DefiDigJoin" id="_button_dig_DefiJoin">UNLOCK WALLET</div><br/>
+<div class="ob"><span id="_label_dig_DefiAddress">WALLET</span> <span class="textwarn" id="dig_address">?</span></div>
+<div class="center" id="form_head"><div class="forward" data-action="DefiGemtPayLoad" id="_button_refresh"></div></div>
+<select class="vb" data-change="DefiGemtPayLoad" id="pay_money">
+ <option selected value="GEMT9">GEMT9</option>
+ <option value="coin">BNB</option>
+</select><br/>
+<div class="ob"><span id="_label_hack_DefiProgAmt">Account Balance</span> <span class="textwarn" id="pro_amt">?</span></div>
+<input type="text" class="vb" placeholder="reference transaction hash" data-change="DefiGemtPayTxhRef" id="pay_ref"/><br/>
+<input type="text" class="vb" placeholder="recipient address" data-change="DefiGemtPayAddrTo" id="pay_to"/><br/>
+<input type="text" class="vb" placeholder="payment amount" data-change="DefiGemtPayAmount" id="pay_amount"/><br/>
+<input type="text" class="vb" placeholder="message or note" data-change="" id="pay_note"/><br/>
+<div class="vbutton" data-action="DefiGemtPayWithRefRaw" id="_button_GemtPaySend">PAY</div><br/>
+<div class="center" id="form_status"><div class="backward" data-action="ClearInput" id="_button_check"></div></div>
+<br/>
+<br/>
+</div>
+<script>
+window.onload=function(){
+promoteMenu();
+getMetamask(function(){startGemt()});txgwei=0;
+}
+</script>
+</body>
+</html>

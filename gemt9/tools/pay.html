@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <html lang="en">
 <head>
-<title>ASINERUM DEFI: GAME MACHINE</title>
+<title>ASINERUM DEFI: PAYING MACHINE</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/fonts.css" rel="stylesheet" type="text/css"/>
 <link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/style.css" rel="stylesheet" type="text/css"/>
@@ -17,23 +17,20 @@
 <div class="center">
 <div class="vbox">
 <div class="center">
-<span class="vhead" id="_label_hack_panelHeaderLode">JS LODE GAME MACHINE</span>
+<span class="vhead" id="_label_hack_panelHeaderPay">JS PAYING MACHINE</span>
 <br/>
 <br/>
-<div class="center" id="form_head"><div class="forward" data-action="DefiGameLodeLoad" id="_button_refresh"></div></div>
-<div class="ob"><span id="_label_hack_DefiGameDate">Game date</span> <span class="textwarn" id="pro_date">?</span></div>
-<select class="vb" id="lode_type">
- <option selected value="DE">DE</option>
- <option value="LO">LO</option>
-</select><br/>
-<select class="vb" data-change="DefiGameLodeLoad" id="lode_money">
+<div class="center" id="form_head"><div class="forward" data-action="DefiGemtPayLoad" id="_button_refresh"></div></div>
+<select class="vb" data-change="DefiGemtPayLoad" id="pay_money">
  <option selected value="GEMT9">GEMT9</option>
+ <option value="coin">BNB</option>
 </select><br/>
-<div class="center" id="lode_countdown">?</div>
-<input type="text" class="vb" placeholder="game selected numbers" data-change="DefiGameLodeNumStr" id="lode_numstr"/><br/>
-<input type="text" class="vb" placeholder="sum amount to deposit" data-change="DefiGameLodeAmount" id="lode_amount"/><br/>
-<div class="ob"><span id="_label_hack_DefiProgAmt">My Token Sum</span> <span class="textwarn" id="pro_amt">?</span></div>
-<div class="vbutton" data-action="DefiGameLodeJoin" id="_button_GameTxPlay">PAY</div><br/>
+<div class="ob"><span id="_label_hack_DefiProgAmt">Account Balance</span> <span class="textwarn" id="pro_amt">?</span></div>
+<input type="text" class="vb" placeholder="reference transaction hash" data-change="DefiGemtPayTxhRef" id="pay_ref"/><br/>
+<input type="text" class="vb" placeholder="recipient address" data-change="DefiGemtPayAddrTo" id="pay_to"/><br/>
+<input type="text" class="vb" placeholder="payment amount" data-change="DefiGemtPayAmount" id="pay_amount"/><br/>
+<input type="text" class="vb" placeholder="message or note" data-change="" id="pay_note"/><br/>
+<div class="vbutton" data-action="DefiGemtPayWithRef" id="_button_GemtPaySend">PAY</div><br/>
 <div class="center" id="form_status"><div class="backward" data-action="ClearInput" id="_button_check"></div></div>
 </div>
 </div>
@@ -46,7 +43,6 @@
 window.onload=function(){
 promoteMenu();
 getMetamask(function(){startGemt()});txgwei=0;
-CountDown('pro_date','lode_countdown');
 }
 </script>
 </body>
