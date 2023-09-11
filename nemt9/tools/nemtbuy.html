@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="en">
+<head>
+<title>ASINERUM DEFI: TOKEN CONSUMER'S PANEL</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/fonts.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/favicon.ico" rel="icon" type="image/x-icon"/>
+<script src="https://cdn.jsdelivr.net/gh/asinerum/project/base.js"></script>
+</head>
+<body class="group">
+<div class="body" id="body">
+<img class="banner" src="https://cdn.jsdelivr.net/gh/asinerum/project/gui/asinerum.jpg" id="_img_banner"/>
+<br/>
+<br/>
+<div class="center">
+<div class="gbox">
+<div class="center">
+<span class="ghead" id="_label_offer_investor">CONSUMER'S PANEL</span>
+<br/>
+<br/>
+<div class="center" id="form_head"><div class="tick" data-action="DefiProgReId" id="_button_refresh"></div></div>
+<input type="text" class="gb" data-change="DefiProgReId" placeholder="Offer ID" id="pro_buy_id"/><br/>
+<div class="ob"><span id="_label_offer_DefiProgAPR">Tokens per Coin</span> <span class="textwarn" id="pro_apr">?</span></div>
+<div class="ob"><span id="_label_offer_DefiProgSum">Tokens Supplied</span> <span class="textwarn" id="pro_sum">?</span></div>
+<div class="ob"><span id="_label_offer_DefiProgAge">Expiration Date</span> <span class="textwarn" id="pro_age">?</span></div>
+<div class="ob"><span id="_label_offer_DefiProgOwn">Tokens Supplier</span> <span class="textwarn" id="pro_own">?</span></div>
+<input type="text" class="gb" data-change="DefiProgInst" placeholder="Quantity" id="pro_buy_gemt"/><br/>
+<div class="gbutton" data-action="DefiProgJoin" id="_button_offer_DefiProgJoin">BUY</div><br/>
+<div class="center" id="form_status"><div class="pause" data-action="ClearInput" id="_button_check"></div></div>
+</div>
+</div>
+</div>
+<br/>
+<br/>
+<div class="footer" id="_header_copyright">(C)</div>
+</div>
+<script>
+window.onload=function(){
+promoteMenu();
+getMetamask(function(){BUYTOKEN=false;selectTokens('NEMT9')});txgwei=0;
+}
+</script>
+</body>
+</html>
