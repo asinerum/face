@@ -7,11 +7,7 @@
 <link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/fonts.css" rel="stylesheet" type="text/css"/>
 <link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/style.css" rel="stylesheet" type="text/css"/>
 <link href="https://cdn.jsdelivr.net/gh/asinerum/project/favicon.ico" rel="icon" type="image/x-icon"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/asinerum/project/scr/_axios.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/asinerum/project/scr/_qrcode.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/asinerum/project/scr/_web3js.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/asinerum/project/scr/xuteng.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/asinerum/project/base.js"></script>
 </head>
 <body class="group">
 <div class="body" id="body">
@@ -27,9 +23,10 @@
 <div class="center" id="form_head"><div class="forward" data-action="DefiHackProgLoad" id="_button_refresh"></div></div>
 <select class="vb" data-change="DefiHackProgLoad" id="pro_token">
  <option value="token">Select token to hack</option>
- <option value="GEMT9">GEMT?</option>
- <option value="NEMT9">NEMT?</option>
- <option value="REMT9">REMT?</option>
+ <option value="GEMT9">GEMT9</option>
+ <option value="NEMT9">NEMT9</option>
+ <option value="REMT9">REMT9</option>
+ <option value="X">X</option>
 </select><br/>
 <input type="text" class="vb" data-change="DefiHackProgIdno" placeholder="Take the secret number" id="pro_id"/><br/>
 <div class="ob"><span id="_label_hack_DefiProgAmt">My Token Sum</span> <span class="textwarn" id="pro_amt">?</span></div>
@@ -43,7 +40,11 @@
 <br/>
 <div class="footer" id="_header_copyright">(C)</div>
 </div>
-<script src="https://cdn.jsdelivr.net/gh/asinerum/project/menu.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/asinerum/project/startGemt.js"></script>
+<script>
+window.onload=function(){
+promoteMenu();
+getMetamask(function(){selectTokens('GEMT9')});txgwei=0;
+}
+</script>
 </body>
 </html>
