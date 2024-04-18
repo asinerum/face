@@ -1,0 +1,22 @@
+(function(){
+ this.sender = '';
+ this.senderId = '';
+ this.senderPte = '';
+ this.txreceipt = '';
+ this.sendingEth = '';
+ this.sendingAbi = '';
+ this.sendingFunc = '';
+ this.xutengFemt = null;
+ this.mineInterval = null;
+ this.network = BINANCE;
+ this.networkChainId = 56;
+ this.COIN = 'BNB';
+ this.TOKEN = 'GEMT9';
+ this.SCABI = abis[TOKEN];
+ this.CONTRACT = contracts[TOKEN];
+ this.contractAddress = CONTRACT[network].addr;
+ this.maxgas = 300000;
+ this.txgwei = 1;
+ this.estgas = 0;
+ this.gasfee = 0;
+})();
