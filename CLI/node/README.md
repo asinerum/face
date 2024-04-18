@@ -13,40 +13,50 @@ Pure NodeJS CLI.
 2. NPM v6 or higher.
 
 ## Installation
+> 
 > git clone https://github.com/asinerum/face 
 > 
 > cd face/CLI/node 
 > 
 > npm install 
+> 
 
 ## Usage
 ### Wallet Creation
+> 
 > node wallet.js --out &lt;JSON_FILE&gt;
+> 
 1. JSON_FILE is a JSON file to put the newly created wallet in (default "wallet.json").
 2. Every user is required to provide a password to encrypt the wallet.
 3. The password is not recoverable.
 4. Wallets can be created as many as needed.
 ### Wallet Checking
+> 
 > node wopen.js --file &lt;JSON_FILE&gt;
+> 
 1. JSON_FILE is the JSON file in which a user stores his encrypted wallet, as previously explained.
 2. The password to decrypt the wallet is required.
 3. The expected wallet address is to be shown thereafter.
 ### Environment Variable Settings
 1. Environment variables are stored in the ".env" file, where only YOUR_KEYSTORE_V3 need to be set for actual use.
 2. The YOUR_KEYSTORE_V3 value can be taken from the "wallet.json" file created before, as above mentioned.
+> 
 > For whom being not familiar with NodeJS, run:
 > 
-> *node wks.js &lt;WALLET_FILE> &lt;KEYSTORE_FILE&gt;*
+> *node wks.js &lt;WALLET_FILE&gt; &lt;KEYSTORE_FILE&gt;*
 > 
 > then see the YOUR_KEYSTORE_V3 value being saved in KEYSTORE_FILE file (default "keystore.json").
+> 
 ### Run FACE Mining
 > 
-> node mine.js &lt;TOKEN_SYMBOL> --gas &lt;GAS_LIMIT> --idle &lt;TX_INTERVAL> --loop &lt;TX_TIMES> --pass &lt;SKIP_TIME&gt;
+> node mine.js &lt;TOKEN_SYMBOL&gt; --gas &lt;GAS_LIMIT&gt; --idle &lt;TX_INTERVAL&gt; --loop &lt;TX_TIMES&gt; --pass &lt;SKIP_TIME&gt;
 > 
 For example:
+> 
 > node mine.js gemt9 --gas 400000 --idle 15 --loop 2 --pass 5
 > 
 Or shorter:
+> 
 > node mine.js nemt9 --idle 60
 > 
 
