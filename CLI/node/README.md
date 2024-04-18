@@ -21,13 +21,13 @@ Pure NodeJS CLI.
 
 ## Usage
 ### Wallet Creation
-> node wallet.js --out <JSON_FILE>
+> node wallet.js --out &lt;JSON_FILE&gt;
 1. JSON_FILE is a JSON file to put the newly created wallet in (default "wallet.json").
 2. Every user is required to provide a password to encrypt the wallet.
 3. The password is not recoverable.
 4. Wallets can be created as many as needed.
 ### Wallet Checking
-> node wopen.js --file <JSON_FILE>
+> node wopen.js --file &lt;JSON_FILE&gt;
 1. JSON_FILE is the JSON file in which a user stores his encrypted wallet, as previously explained.
 2. The password to decrypt the wallet is required.
 3. The expected wallet address is to be shown thereafter.
@@ -36,19 +36,19 @@ Pure NodeJS CLI.
 2. The YOUR_KEYSTORE_V3 value can be taken from the "wallet.json" file created before, as above mentioned.
 > For whom being not familiar with NodeJS, run:
 > 
-> *node wks.js <WALLET_FILE> <KEYSTORE_FILE>*
+> *node wks.js &lt;WALLET_FILE> &lt;KEYSTORE_FILE&gt;*
 > 
 > then see the YOUR_KEYSTORE_V3 value being saved in KEYSTORE_FILE file (default "keystore.json").
 ### Run FACE Mining
 > 
-> node mine.js <TOKEN_SYMBOL> --gas <GAS_LIMIT> --idle <TX_INTERVAL> --loop <TX_TIMES> --pass <SKIP_TIME>
+> node mine.js &lt;TOKEN_SYMBOL> --gas &lt;GAS_LIMIT> --idle &lt;TX_INTERVAL> --loop &lt;TX_TIMES> --pass &lt;SKIP_TIME&gt;
 > 
 For example:
 > node mine.js gemt9 --gas 400000 --idle 15 --loop 2 --pass 5
->
+> 
 Or shorter:
 > node mine.js nemt9 --idle 60
->
+> 
 
 1. TOKEN_SYMBOL is mandatory argument, currently must be "gemt9" or "nemt9".
 2. GAS_LIMIT is transaction gas limit (default "300000", should be "400000" or a bit higher).
