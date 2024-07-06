@@ -3,8 +3,25 @@ const miner = require("face-token-miner");
 const prompt = require("prompt");
 let token = process.argv[2];
 token = token?token.toUpperCase():null;
-if(!miner.asset.contracts[token])miner.exit.nocoin();
-// Mining logs (not used)
+if(!miner.asset.contracts[token]){
+  console.log('');
+  console.log('Usage:');
+  console.log('');
+  console.log('node mine.js <TOKEN> [ARGUMENTS]');
+  console.log('');
+  console.log('The TOKEN must be "GEMT9" or "NEMT9"');
+  console.log('');
+  console.log('The ARGUMENTS are:');
+  console.log('');
+  console.log('--idle <number>: idle time (in minutes) between one mining transaction and the next');
+  console.log('--loop <number>: planned number of mining transactions to be executed');
+  console.log('--pass <number>: least time (in minutes) between the latest successful mining and the current one');
+  console.log('--gwei <number>: transaction gas price in Gwei');
+  console.log('--gas <number>: transaction gas limit');
+  console.log('');
+  miner.exit.nocoin();
+}
+// Mining logs (not used so far)
 let log = miner.app.cliFlagArgv('-l');
 let out = miner.app.cliArgument('--out','log.txt');
 // Idle time (in minutes) between mining transactions
@@ -23,7 +40,7 @@ times = miner.util.s2n(times);
 mskip = miner.util.s2n(mskip);
 gas = miner.util.s2n(gas);
 gwei = miner.util.s2n(gwei);
-miner.chain.txgwei = gwei;
+miner.network.setGwei(gwei);
 //
 const password =
 [

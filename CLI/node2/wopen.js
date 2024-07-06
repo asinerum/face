@@ -1,7 +1,15 @@
 require("dotenv").config();
 const miner = require("face-token-miner");
 const prompt = require("prompt");
-let file = miner.app.cliArgument('--file','wallet.json');
+const wallet = 'wallet.json';
+console.log('');
+console.log('Usage:');
+console.log('');
+console.log('node wopen.js --file [WALLET_JSON_FILE]');
+console.log('');
+console.log(`The WALLET_JSON_FILE default value is "${wallet}"`);
+console.log('');
+let file = miner.app.cliArgument('--file',wallet);
 const password =
 [
   {

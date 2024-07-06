@@ -1,5 +1,13 @@
 const wFile = 'wallet.json';
 const kFile = 'keystore.json';
+console.log('');
+console.log('Usage:');
+console.log('');
+console.log('node wks.js [WALLET_JSON_FILE] [OUTPUT_KEYSTORE_FILE]');
+console.log('');
+console.log(`The WALLET_JSON_FILE default value is "${wFile}"`);
+console.log(`The OUTPUT_KEYSTORE_FILE default value is "${kFile}"`);
+console.log('');
 let fs = require('fs');
 let file = process.argv[2];
 if(!file){
