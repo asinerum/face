@@ -1,11 +1,11 @@
 require("dotenv").config();
 const miner = require("face-token-miner");
 const prompt = require("prompt");
-const wallet = 'wallet.json';
+const wallet = 'solwallet.json';
 console.log('');
 console.log('Usage:');
 console.log('');
-console.log('node wopen.js --file [WALLET_JSON_FILE]');
+console.log('node wopensol.js --file [WALLET_JSON_FILE]');
 console.log('');
 console.log(`The WALLET_JSON_FILE default value is "${wallet}"`);
 console.log('');
@@ -24,7 +24,7 @@ prompt.start();
 prompt.get(password,function(err,result){
   if(err){return(console.log(err.toString()))}
   try{
-    let account = miner.account.openWallet(result.password,file);
+    let account = miner.solana.account.openWallet(result.password,file);
     if(!account)return(console.log(miner.ui.FAILED));
     console.log(miner.ui.DONE,miner.ui.NEWLINE,account.address);
   }catch(e){miner.die(e)}

@@ -1,14 +1,17 @@
 require("dotenv").config();
 const miner = require("face-token-miner");
 const prompt = require("prompt");
-const wallet = 'wallet.json';
+const symbol = 'BTC';
+const wallet = 'bitwallet.json';
 console.log('');
 console.log('Usage:');
 console.log('');
-console.log('node wallet.js --out [WALLET_JSON_FILE]');
+console.log('node walletbit.js --asset [CRYPTO_SYMBOL] --out [WALLET_JSON_FILE]');
 console.log('');
+console.log(`The CRYPTO_SYMBOL default value is "${symbol}"`);
 console.log(`The WALLET_JSON_FILE default value is "${wallet}"`);
 console.log('');
+let asset = miner.app.cliArgument('--asset',symbol);
 let out = miner.app.cliArgument('--out',wallet);
 const password =
 [
@@ -43,7 +46,8 @@ prompt.get(password,function(err,result){
       if(err){return(console.log(err.toString()))}
       pwd2 = result.repeat;
       if(pwd2!==pwd)return(console.log(miner.ui.FAILED));
-      miner.account.newAccSave(pwd,false,out,
+      miner.network.setSymb(asset);
+      miner.bitcoin.account.newAccSave(pwd,false,out,
       function(data){
         if(data){
           console.log(data);

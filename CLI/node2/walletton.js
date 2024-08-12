@@ -1,11 +1,11 @@
 require("dotenv").config();
 const miner = require("face-token-miner");
 const prompt = require("prompt");
-const wallet = 'wallet.json';
+const wallet = 'tonwallet.json';
 console.log('');
 console.log('Usage:');
 console.log('');
-console.log('node wallet.js --out [WALLET_JSON_FILE]');
+console.log('node walletton.js --out [WALLET_JSON_FILE]');
 console.log('');
 console.log(`The WALLET_JSON_FILE default value is "${wallet}"`);
 console.log('');
@@ -43,7 +43,7 @@ prompt.get(password,function(err,result){
       if(err){return(console.log(err.toString()))}
       pwd2 = result.repeat;
       if(pwd2!==pwd)return(console.log(miner.ui.FAILED));
-      miner.account.newAccSave(pwd,false,out,
+      miner.toncoin.account.newAccSave(pwd,false,out,
       function(data){
         if(data){
           console.log(data);
