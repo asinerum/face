@@ -1,5 +1,5 @@
 # FACEs TOKEN MINER
-> v2.0.1
+> v2.0.2
 >
 ## Features
 >
@@ -13,10 +13,10 @@
 >
 ## Usage
 >
-#### On BNB Smart Chain Network
+### (1) On BNB Smart Chain Network
 >
 > This is also suitable for ETH and ETC networks,
-> But some professional coding tips are required.
+> Some <.env> environment settings are required.
 >
 **Load .ENV settings and library:**
 ```ts
@@ -27,6 +27,7 @@ const miner = require("face-token-miner");
 >
 **Create a paper wallet:**
 ```ts
+// Refer to <./examples/wallet.js>
 // Randomly create a wallet and save it to a <.json> file
 miner.account.newAccSave("your_encryption_password", false, "your_wallet_storage_file.json");
 // Create new wallet only, with encrypted keystore version 3
@@ -39,6 +40,7 @@ console.log("Wallet Keystore V3:\n", new_wallet_data.keyStore);
 >
 **Choose one of the three ways to use a paper wallet:**
 ```ts
+// Refer to <./examples/wopen.js>
 // Retrieve wallet from <.json> storage file
 miner.account.openWallet("your_encryption_password", "your_wallet_storage_file.json");
 // Retrieve wallet from <.env> settings
@@ -50,6 +52,7 @@ miner.account.import(hex64_private_key, true);
 >
 **Work with native coins and ERC20 tokens:**
 ```ts
+// Refer to <./examples/send.js>
 // Start ERC20 token connection
 var network_gas_limit = 200000;
 var erc20_token_address = "0x55d398326f99059ff775485246999027b3197955";
@@ -83,7 +86,7 @@ miner.token.faceConnect(network_gas_limit, mineable_token_symbol);
 miner.token.faceAutoMine(pause_after_one_mining, total_mining_attempts, skip_time_from_last_mining);
 ```
 >
-#### On Solana Network
+### (2) On Solana Network
 >
 **Load .ENV settings and library:**
 ```ts
@@ -94,6 +97,7 @@ const {solana} = require("face-token-miner");
 >
 **Create a paper wallet:**
 ```ts
+// Refer to <./examples/walletsol.js>
 // Randomly create a wallet and save it to a <.json> file
 solana.account.newAccSave("your_encryption_password", false, "your_sol_wallet_storage_file.json");
 // Create new wallet only, with encrypted keystore version 3
@@ -106,6 +110,7 @@ console.log("Wallet Keystore V3:\n", new_wallet_data.keyStore);
 >
 **Choose the way to use a paper wallet:**
 ```ts
+// Refer to <./examples/wopensol.js>
 // Retrieve wallet from <.json> storage file
 solana.account.openWallet("your_encryption_password", "your_sol_wallet_storage_file.json");
 // Retrieve wallet from <.env> settings
@@ -117,6 +122,7 @@ solana.account.import(hex128_private_key, true);
 >
 **Work with SOL coins and SPL tokens:**
 ```ts
+// Refer to <./examples/sendsol.js>
 // Test RPC functions
 var recipient_address = "Eh5cwMd5iQP5tVtxLa88R7hr2tbj1kKSQeWMmpKvJJJ1";
 var spl_token_address = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v";
@@ -132,7 +138,7 @@ var spl_token_sending_amount = 224.5; //USDC
 await solana.user.transferToken(spl_token_address, recipient_address, spl_token_sending_amount);
 ```
 >
-#### On TON Network
+### (3) On TON Network
 >
 **Load .ENV settings and library:**
 ```ts
@@ -143,6 +149,7 @@ const {toncoin} = require("face-token-miner");
 >
 **Create a paper wallet:**
 ```ts
+// Refer to <./examples/walletton.js>
 // Randomly create a wallet and save it to a <.json> file
 toncoin.account.newAccSave("your_encryption_password", false, "your_ton_wallet_storage_file.json");
 // Create new wallet only, with encrypted keystore version 3
@@ -155,6 +162,7 @@ console.log("Wallet Keystore V3:\n", new_wallet_data.keyStore);
 >
 **Choose the way to use a paper wallet:**
 ```ts
+// Refer to <./examples/wopenton.js>
 // Retrieve wallet from <.json> storage file
 toncoin.account.openWallet("your_encryption_password", "your_ton_wallet_storage_file.json");
 // Retrieve wallet from <.env> settings
@@ -166,6 +174,7 @@ toncoin.account.import(hex128_private_key, true);
 >
 **Work with TON coins and Jetton tokens:**
 ```ts
+// Refer to <./examples/sendton.js>
 // Test RPC functions
 // Note: any TON address must be activated before use
 var recipient_address = "EQBeUCmO1DDFwKbI09vniuAUmYJfHLsK7cZXeUFa5kWctz14";
@@ -186,7 +195,7 @@ var jetton_token_sending_amount = 2000; //NOT
 await toncoin.user.transferToken(jetton_token_address, recipient_address, jetton_token_sending_amount, jetton_token_tx_fee_deposit, jetton_token_tx_message_fee, jetton_token_tx_memo);
 ```
 >
-#### On BTC/BCH/LTC Networks
+### (4) On BTC/BCH Networks
 >
 **Load .ENV settings and library:**
 ```ts
@@ -194,13 +203,14 @@ await toncoin.user.transferToken(jetton_token_address, recipient_address, jetton
 require("dotenv").config();
 const {bitcoin} = require("face-token-miner");
 // Assign cryptocurrency in use
-// Now BTC, BCH, LTC only are accepted
+// Now BTC/BCH/LTC are accepted
 console.log(bitcoin.network.getSymb()); //BNB at default
-bitcoin.network.setSymb("BTC"); //BCH, LTC also accepted
+bitcoin.network.setSymb("BTC"); //BCH|LTC
 ```
 >
 **Create a paper wallet:**
 ```ts
+// Refer to <./examples/walletbit.js>
 // Randomly create a wallet and save it to a <.json> file
 bitcoin.account.newAccSave("your_encryption_password", false, "your_btc_wallet_storage_file.json");
 // Create new wallet only, with encrypted keystore version 3
@@ -213,6 +223,7 @@ console.log("Wallet Keystore V3:\n", new_wallet_data.keyStore);
 >
 **Choose the way to use a paper wallet:**
 ```ts
+// Refer to <./examples/wopenbit.js>
 // Retrieve wallet from <.json> storage file
 await bitcoin.account.openWallet("your_encryption_password", "your_btc_wallet_storage_file.json");
 // Retrieve wallet from <.env> settings
@@ -222,18 +233,57 @@ var hex64_private_key = "206fdf741af97638f655eb3f1e05addc976cc86103f6b108604de21
 await bitcoin.account.import(hex64_private_key, true);
 ```
 >
-**Work with BTC-like coins:**
+**Work with native coins:**
 ```ts
+// Refer to <./examples/sendbit.js>
 // Test RPC functions
 var recipient_address = "1CXsNnd148Dv7Nj9p4oTBYkVJ8NDvghac5";
 bitcoin.data.bits(); //BTC, balance of the opened wallet
 bitcoin.user.bits(recipient_address); //BTC, balance of certain wallet
-// Send BTC-like coins
+// Send native coins
 var native_coin_sending_amount = 10; //BTC
 await bitcoin.user.transfer(native_coin_sending_amount, recipient_address);
 ```
 >
-#### More Examples and Explanations
+### (5) On LTC/DOGE/DASH Networks
+>
+**Load .ENV settings and library:**
+```ts
+// Refer to <./examples/.env>
+require("dotenv").config();
+const {bitcoin} = require("face-token-miner");
+// Assign crypto network in use
+// Now bitcoin/litecoin/dogecoin/dash are accepted
+let network = "litecoin";
+```
+>
+**Create a paper wallet:**
+```ts
+// Refer to <./examples/walletlite.js>
+// Randomly create a wallet and save it to a <.json> file
+bitcoin.account.newAccSave2("your_encryption_password", "your_btc_wallet_storage_file.json", network);
+```
+>
+**Choose the way to use a paper wallet:**
+```ts
+// Refer to <./examples/wopenlite.js>
+// Retrieve wallet from <.json> storage file
+bitcoin.account.openWallet2("your_encryption_password", "your_btc_wallet_storage_file.json", network);
+// Retrieve wallet from <.env> settings
+bitcoin.account.yourWallet2("your_encryption_password", network);
+```
+>
+**Work with native coins:**
+```ts
+// Refer to <./examples/sendlite.js>
+// Send native coins
+var recipient_address = "LWkpdzvq8nTyNBRJzCnkTZpFWLjW6x29Yc";
+var native_coin_sending_amount = 10; //LTC
+var native_coin_transaction_fee = 0.001; //LTC
+bitcoin.user.transfer2(native_coin_sending_amount, recipient_address, native_coin_transaction_fee, network);
+```
+>
+### (6) More Examples and Explanations
 >
 https://github.com/asinerum/face/tree/main/CLI/node2
 >
