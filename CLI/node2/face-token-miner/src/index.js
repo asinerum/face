@@ -1,6 +1,13 @@
 //captions
 
 const hi_alert_data = 'WRONG INPUT DATA';
+const hi_alert_address = 'ADDRESS INVALID';//V202
+const hi_alert_badpair = 'VALUE PAIR INVALID';//V202
+const hi_alert_balance = 'AMOUNT INVALID OR BALANCE NOT ENOUGH';//V202
+const hi_alert_lessval = 'AMOUNT INVALID';//V202
+const hi_alert_moreval = 'BALANCE NOT ENOUGH';//V202
+const hi_alert_noether = 'YOU HAVE NO NATIVE COINS TO MAKE TRANSACTIONS';//V202#
+
 const hi_msg_comeon = 'Really want to continue [y/n]';
 const hi_msg_dsaved = 'Your data was saved to file';
 const hi_msg_idling = 'Idling to start..';
@@ -11,6 +18,7 @@ const hi_msg_oldpwd = 'Password to decrypt your private key';
 const hi_msg_repeat = 'Repeat once more';
 const hi_msg_trying = 'Trying to find nonce..';
 const hi_msg_txmake = 'Making transaction request..';
+
 const hi_prompt_chk = 'PASSWORD MUST CONTAIN AT LEAST 6 LOWERCASE/UPPERCASE/NUMERIC CHARACTERS';
 const hi_prompt_err = 'SOMETHING WENT WRONG PLEASE CHECK YOUR BALANCE';
 const hi_prompt_fee = 'GAS COST ESTIMATION';
@@ -65,6 +73,21 @@ const SIGNATURE = 'signature';
 const MAINNET = 'mainnet';
 const BINANCE = 'binance';
 const CLASSIC = 'classic';
+const BITCOIN = 'bitcoin';//V202
+const BITTEST = 'testnet';//V202
+const CASHCOIN = 'bitcoincash';//V202:cashcoin
+const CASHTEST = 'bitcoincashTestnet';//V202
+const GOLDCOIN = 'bitcoingold';//V202
+const SVCOIN = 'bitcoinsv';//V202
+const SVTEST = 'bitcoinsvTestnet';//V202
+const DASHCOIN = 'dash';//V202:dashcoin
+const DASHTEST = 'dashTest';//V202
+const DOGECOIN = 'dogecoin';//V202
+const DOGETEST = 'dogecoinTest';//V202
+const LITECOIN = 'litecoin';//V202
+const LITETEST = 'litecoinTest';//V202
+const ZCCOIN = 'zcash';//V202
+const ZCTEST = 'zcashTest';//V202
 const LOCALHOST = 'localhost';
 const AND = '&';
 const ASK = '?';
@@ -117,12 +140,15 @@ const GEMT={
 mainnet:{ncid:1,addr:'0x4f8e54e2e840561e5aa8a296ad5f7b0ae18e6eff',hash:'0xadf8c72399b53b3486b665798b6599109a7c6ed33593d65c0354504d0bac92c8',rpcs:'https://mainnet.rpc.fiews.io/v1/free',bcls:'private',scan:'https://etherscan.io/token/'},//V1
 binance:{ncid:56,addr:'0x9F57B97a6723b1620A6360af33B28d006806EC0d',hash:'0xd0a965e306a7798eff5bd964f66c4816324ad64bdb93507dd30c6e28b3d64d1e',rpcs:'https://bsc-dataseed.binance.org/',bcls:'private',scan:'https://www.bscscan.com/token/'},//V9
 classic:{ncid:61,addr:'0xc9dDF5d5adBA8711F106953B97987B02F8EAe5e4',hash:'0xad8c60417f5266e28906fdc6a5b2dc050abfe75a999623153589fbd2a0d721a4',rpcs:'https://www.ethercluster.com/etc/',bcls:'private',scan:'https://etcblockexplorer.com/token/'}};
+
 const NEMT={
 mainnet:{ncid:1,addr:'0x208871E7f29C0C0e131Dc275f1FCfc9e73C2b06e',hash:'0xe7a06b31a4ea68e0611fc28bd6a176d1179b15a4ac4a056430ff2c89bd80700b',rpcs:'https://mainnet.rpc.fiews.io/v1/free',bcls:'private',scan:'https://etherscan.io/token/'},//V1
 binance:{ncid:56,addr:'0x2e23950C00bDd2505EE64494bc554e59050C70Ce',hash:'0xee62eecd9e06f15a8ec2e71672f55cdcd4bbdaafdb5746d1b477137566096cee',rpcs:'https://bsc-dataseed.binance.org/',bcls:'private',scan:'https://www.bscscan.com/token/'},//V9
 classic:{ncid:61,addr:'0x050010e67858E4B71f6D79359ad950e614863e0d',hash:'0xe63a60272577195cf05bbef7a30b736597e4255ff34288d55aa80d58f8fee610',rpcs:'https://www.ethercluster.com/etc/',bcls:'private',scan:'https://etcblockexplorer.com/token/'}};
+
 const ABIGEMT=[
 {"constant":true,"inputs":[],"name":"basicRate","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"bytes32"},{"name":"","type":"uint256"}],"name":"refnosOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"spender","type":"address"},{"name":"value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"blockReward","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"ref","type":"bytes32"},{"name":"to","type":"address"},{"name":"value","type":"uint256"},{"name":"note","type":"string"}],"name":"pay","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"},{"name":"","type":"address"}],"name":"invests","outputs":[{"name":"amount","type":"uint256"},{"name":"start","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"stampRewards","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"from","type":"address"},{"name":"to","type":"address"},{"name":"value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"randomKey","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"}],"name":"withdraw","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"petri","type":"uint256"},{"name":"value","type":"uint256"}],"name":"program","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"value","type":"uint256"}],"name":"acquire","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"cancel","type":"bool"}],"name":"release","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"lastProof","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"}],"name":"unpost","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"rewardStamp","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"timerewStep","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"STAGE","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"half","type":"bool"}],"name":"close","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"programs","outputs":[{"name":"eth","type":"bool"},{"name":"maker","type":"address"},{"name":"value","type":"uint256"},{"name":"petri","type":"uint256"},{"name":"open","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"MX","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"author","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"to","type":"address"},{"name":"value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"deposits","outputs":[{"name":"eth","type":"bool"},{"name":"maker","type":"address"},{"name":"taker","type":"address"},{"name":"value","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"markets","outputs":[{"name":"buytoken","type":"bool"},{"name":"maker","type":"address"},{"name":"value","type":"uint256"},{"name":"ppe","type":"uint256"},{"name":"time","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"START","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"to","type":"address"},{"name":"value","type":"uint256"}],"name":"deposit","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"blockPayouts","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"value","type":"uint256"}],"name":"invest","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"value","type":"uint256"},{"name":"ppe","type":"uint256"},{"name":"time","type":"uint256"}],"name":"post","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"ua","type":"address"},{"name":"key","type":"string"},{"name":"form","type":"string"},{"name":"skip","type":"uint256"}],"name":"refnos","outputs":[{"name":"size","type":"uint256"},{"name":"nos","type":"uint256[25]"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"name":"refno","type":"uint256"},{"indexed":true,"name":"ETH","type":"bool"},{"indexed":true,"name":"maker","type":"address"},{"indexed":true,"name":"taker","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Bank","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"ref","type":"bytes32"},{"indexed":true,"name":"ETH","type":"bool"},{"indexed":true,"name":"maker","type":"address"},{"indexed":true,"name":"taker","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Pay","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"refno","type":"uint256"},{"indexed":true,"name":"maker","type":"address"},{"indexed":true,"name":"petri","type":"uint256"},{"indexed":true,"name":"open","type":"uint256"}],"name":"Plan","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"refno","type":"uint256"},{"indexed":true,"name":"taker","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Put","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"fromAddress","type":"address"},{"indexed":true,"name":"toAddress","type":"address"},{"indexed":false,"name":"txPenny","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"ownerAddress","type":"address"},{"indexed":true,"name":"spenderAddress","type":"address"},{"indexed":false,"name":"txPenny","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"refno","type":"uint256"},{"indexed":true,"name":"buy","type":"bool"},{"indexed":true,"name":"maker","type":"address"},{"indexed":true,"name":"ppe","type":"uint256"},{"indexed":false,"name":"time","type":"uint256"}],"name":"Sale","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"refno","type":"uint256"},{"indexed":true,"name":"taker","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Get","type":"event"},{"constant":true,"inputs":[{"name":"nonce","type":"uint256"},{"name":"key","type":"uint256"},{"name":"uai","type":"uint256"}],"name":"keygen","outputs":[{"name":"num","type":"uint256"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":false,"inputs":[{"name":"nonce","type":"uint256"}],"name":"mine","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"}];
+
 const ABINEMT=[
 {"constant":true,"inputs":[],"name":"basicRate","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"bytes32"},{"name":"","type":"uint256"}],"name":"refnosOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"spender","type":"address"},{"name":"value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"result","type":"uint256"}],"name":"ungame","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"games","outputs":[{"name":"eth","type":"bool"},{"name":"close","type":"uint256"},{"name":"maker","type":"address"},{"name":"value","type":"uint256"},{"name":"result","type":"uint256"},{"name":"name","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"saves","outputs":[{"name":"eth","type":"bool"},{"name":"open","type":"uint256"},{"name":"maker","type":"address"},{"name":"taker","type":"address"},{"name":"value","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"from","type":"address"},{"name":"to","type":"address"},{"name":"value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"randomKey","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"bid","type":"bool"},{"name":"open","type":"uint256"},{"name":"close","type":"uint256"},{"name":"stock","type":"uint256"},{"name":"price","type":"uint256"},{"name":"value","type":"uint256"},{"name":"name","type":"string"},{"name":"note","type":"string"}],"name":"offer","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"}],"name":"unoffer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"value","type":"uint256"}],"name":"acquire","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"pcts","type":"uint256[3]"}],"name":"regame","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"value","type":"uint256"}],"name":"bid","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"}],"name":"unpost","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"close","type":"uint256"},{"name":"value","type":"uint256"},{"name":"pcts","type":"uint256[3]"},{"name":"name","type":"string"},{"name":"note","type":"string"}],"name":"game","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"restock","type":"uint256"}],"name":"reoffer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"refno","type":"uint256"}],"name":"GAME","outputs":[{"name":"pcts","type":"uint256[3]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"offers","outputs":[{"name":"eth","type":"bool"},{"name":"bid","type":"bool"},{"name":"open","type":"uint256"},{"name":"close","type":"uint256"},{"name":"stock","type":"uint256"},{"name":"maker","type":"address"},{"name":"taker","type":"address"},{"name":"price","type":"uint256"},{"name":"value","type":"uint256"},{"name":"name","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"author","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"hash","type":"bytes32"},{"name":"to","type":"address"},{"name":"value","type":"uint256"}],"name":"re","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"to","type":"address"},{"name":"value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"bet","type":"uint256"},{"name":"value","type":"uint256"}],"name":"play","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"value","type":"uint256"},{"name":"note","type":"string"}],"name":"order","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"markets","outputs":[{"name":"buytoken","type":"bool"},{"name":"maker","type":"address"},{"name":"value","type":"uint256"},{"name":"ppe","type":"uint256"},{"name":"time","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"open","type":"uint256"},{"name":"taker","type":"address"},{"name":"value","type":"uint256"},{"name":"note","type":"string"}],"name":"save","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"value","type":"uint256"}],"name":"unsave","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"refno","type":"uint256"},{"name":"value","type":"uint256"},{"name":"ppe","type":"uint256"},{"name":"time","type":"uint256"}],"name":"post","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"ua","type":"address"},{"name":"key","type":"string"},{"name":"form","type":"string"},{"name":"skip","type":"uint256"}],"name":"refnos","outputs":[{"name":"size","type":"uint256"},{"name":"nos","type":"uint256[25]"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"name":"refno","type":"uint256"},{"indexed":false,"name":"ETH","type":"bool"},{"indexed":true,"name":"maker","type":"address"},{"indexed":true,"name":"close","type":"uint256"},{"indexed":false,"name":"price","type":"uint256"},{"indexed":false,"name":"name","type":"string"}],"name":"Sell","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"refno","type":"uint256"},{"indexed":false,"name":"ETH","type":"bool"},{"indexed":true,"name":"maker","type":"address"},{"indexed":true,"name":"close","type":"uint256"},{"indexed":false,"name":"name","type":"string"}],"name":"Game","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"refno","type":"uint256"},{"indexed":false,"name":"ETH","type":"bool"},{"indexed":true,"name":"maker","type":"address"},{"indexed":true,"name":"taker","type":"address"}],"name":"Save","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"refno","type":"uint256"},{"indexed":true,"name":"taker","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Buy","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"refno","type":"uint256"},{"indexed":true,"name":"taker","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Bid","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"refno","type":"uint256"},{"indexed":true,"name":"taker","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Win","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"refno","type":"uint256"},{"indexed":true,"name":"taker","type":"address"},{"indexed":false,"name":"value","type":"uint256"},{"indexed":true,"name":"bet","type":"uint256"}],"name":"Bet","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"hash","type":"bytes32"},{"indexed":false,"name":"ETH","type":"bool"},{"indexed":true,"name":"maker","type":"address"},{"indexed":false,"name":"taker","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Re","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"fromAddress","type":"address"},{"indexed":true,"name":"toAddress","type":"address"},{"indexed":false,"name":"txPenny","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"ownerAddress","type":"address"},{"indexed":true,"name":"spenderAddress","type":"address"},{"indexed":false,"name":"txPenny","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"refno","type":"uint256"},{"indexed":true,"name":"buy","type":"bool"},{"indexed":true,"name":"maker","type":"address"},{"indexed":true,"name":"ppe","type":"uint256"},{"indexed":false,"name":"time","type":"uint256"}],"name":"Sale","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"refno","type":"uint256"},{"indexed":true,"name":"taker","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Get","type":"event"},{"constant":true,"inputs":[{"name":"nonce","type":"uint256"},{"name":"key","type":"uint256"},{"name":"uai","type":"uint256"}],"name":"keygen","outputs":[{"name":"num","type":"uint256"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":false,"inputs":[{"name":"nonce","type":"uint256"}],"name":"mine","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"}];
 
@@ -141,12 +167,27 @@ const ABIERC20=[
 {"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},
 {"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"spender","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Approval","type":"event"},];
 
+const BXCHAINS={/*scan:/address/;api:/addrs/*/
+[BITCOIN]:{version:0x00,pkprefix:0x80,coin:'BTC',rpcs:'',scan:'https://live.blockcypher.com/btc/',api:'https://api.blockcypher.com/v1/btc/main/',push:'https://live.blockcypher.com/btc/pushtx'},
+[DOGECOIN]:{version:0x1E,pkprefix:0x9E,coin:'DOGE',rpcs:'',scan:'https://live.blockcypher.com/doge/',api:'https://api.blockcypher.com/v1/doge/main/',push:'https://live.blockcypher.com/doge/pushtx'},
+[DASHCOIN]:{version:0x4C,pkprefix:0xCC,coin:'DASH',rpcs:'',scan:'https://live.blockcypher.com/dash/',api:'https://api.blockcypher.com/v1/dash/main/',push:'https://live.blockcypher.com/dash/pushtx'},
+[LITECOIN]:{version:0x30,pkprefix:0xB0,coin:'LTC',rpcs:'',scan:'https://live.blockcypher.com/ltc/',api:'https://api.blockcypher.com/v1/ltc/main/',push:'https://live.blockcypher.com/ltc/pushtx'},
+[BITTEST]:{version:0x6F,pkprefix:0xEF,coin:'TEST',rpcs:'',scan:'https://live.blockcypher.com/btc-testnet/',api:'https://api.blockcypher.com/v1/btc/test3/',push:'https://live.blockcypher.com/btc-testnet/pushtx'}};//V202
+
+const BROXIES=[
+{/*https://www.blockcypher.com/dev/bitcoin/#introduction*/
+getTransactionList:function(addr,ncid=BITCOIN,token=BXCHAINS[ncid]?.token){return(`${BXCHAINS[ncid].api}addrs/${addr}?token=${token?token:BLANK}`)},
+getCypherServerUrl:function(ncid=BITCOIN,token=BXCHAINS[ncid]?.token){return(`${BXCHAINS[ncid].api}txs/push?token=${token?token:BLANK}`)},
+sendRawTransaction:function(hex,ncid=BITCOIN,data={tx:String(hex)}){return(axios.post(this.getCypherServerUrl(ncid),data))},//promise
+setApiKey:function(apikey,ncid=BITCOIN){BXCHAINS[ncid].token=apikey}}];//V202
+
 //entries
 
 let sender = '';
 let senderId = '';
 let senderPte = '';
 let senderAcc = null;//V2
+let senderWif = null;//V202
 let txreceipt = '';
 let sendingEth = '';
 let sendingAbi = '';
@@ -190,6 +231,7 @@ String.prototype.LE = function(num){return(s2n(this)<=s2n(num))};
 String.prototype.LT = function(num){return(s2n(this)<s2n(num))};
 String.prototype.is3ks = function(){try{return(avalid(JSON.parse(this).address))}catch(e){return(false)}};
 String.prototype.isKey = function(){return(hvalid(this)||hvalid(this.add0x()))};/***/
+String.prototype.isWif = function(){try{return(bitgo.ECPair.fromWIF(String(this))&&true)}catch(e){return(false)}};//V202
 String.prototype.isBip = function(){return(bipRegex.test(this))};
 String.prototype.isNum = function(){return(/^\d+$/.test(this))};//V2
 String.prototype.escape = function(){return(this.replace(/"/g,'\\"'))};
@@ -272,6 +314,8 @@ const hashRegex = new RegExp('^0x([A-Fa-f0-9]{64})$');
 const tonRegex = new RegExp('^(0|-1):([A-Fa-f0-9]{64})$');//V2
 const btcRegex = new RegExp(/^(bc1|[13]|X|D|L)[a-km-zA-HJ-NP-Z1-9]{25,34}$/);//V201
 const bchRegex = new RegExp(/^([13][a-km-zA-HJ-NP-Z1-9]{25,34})|^((bitcoincash:)?(q|p)[a-z0-9]{41})|^((BITCOINCASH:)?(Q|P)[A-Z0-9]{41})$/);//V201
+const hex64Regex = new RegExp('^([A-Fa-f0-9]{64})$');//V202
+const hex128Regex = new RegExp('^([A-Fa-f0-9]{128})$');//V202
 
 const tokenFactor = function(){return(10**(18-tokenDecimals))};//V2
 const wt2s = function(n,dec=6){return(n2s(fromWei(n)*tokenFactor(),dec))};//V2
@@ -290,6 +334,11 @@ const randBytes = function(length){return(hex2bytes(Buffer.from(randStr(length))
 const hex2bytes = function(hex){return(Uint8Array.from(hex.match(/.{1,2}/g).map((byte)=>parseInt(byte,16))))};//V2
 const bytes2hex = function(bytes){return(bytes.reduce((str,byte)=>str+byte.toString(16).padStart(2,'0'),''))};//V2
 const readIntFromBitString = function(bs,cursor,bits,n=BigInt(0),i){for(i=0;i<bits;i++){n*=BigInt(2);n+=BigInt(bs.get(cursor+i))}return(n)};//V2
+
+const toSat = s2sat;//V202
+const fromSat = function(w){return(s2n(sat2s(w)))};//V202
+const satChange = function(sat_bal,sat_amt,sat_fee){sat_bal=big(sat_bal);sat_amt=big(sat_amt);sat_fee=big(sat_fee);if(sat_bal.lt(sat_amt.add(sat_fee)))throw(ERROR);return(sat_bal.sub(sat_amt).sub(sat_fee).toString())};//V202
+const bitChange = function(bal,amt,fee){return(satChange(toSat(bal),toSat(amt),toSat(fee)))};//V202
 
 //base
 
@@ -313,6 +362,7 @@ let SolTx = solanaWeb3.Transaction;//V2
 
 let crypto;//V201
 let cryptoClient;//V201
+let bitgo;//V202
 
 const byt = function(hex){return(web3.utils.hexToBytes(hex))};
 const num = function(hex){return(web3.utils.hexToNumberString(hex))};
@@ -339,6 +389,10 @@ const _SolTx = function(){return(new SolTx())};//V2
 
 const _Crypto = function(asset=COIN,key=senderPte){return(new Crypto(asset,key))};//V201
 const _CryptoAccount = function(key=senderPte){return(new crypto(key))};//V201
+
+const _Bitgo = function(ncid=BITCOIN,key=senderPte){return(new Bitgo(ncid,key))};//V202
+const _Builder = function(ncid){return(new (require('./txbuilder'))(bitgo.networks[ncid]))};//V202
+const _BWallet = function(wif,ncid=BITCOIN,w){w=bitgo.ECPair.fromWIF(wif);w.network=bitgo.networks[ncid];return(w)};//V202
 
 let your_keystore_v3 = process.env.YOUR_KEYSTORE_V3;
 let your_rpc_api_key = process.env.YOUR_RPC_API_KEY;
@@ -582,6 +636,30 @@ const accSave = function(pw,use=false,out='wallet.json',cbf=console.log,alert=co
 const keyImport = function(func,asset/*[newaccfunc][COIN]*/,key,alert){if(typeof(asset)==='function'){func(asset,key,alert)}else{func(key,1,asset,alert)}};//V201
 const bitKeyImport = function(key,use,asset,alert){(async()=>{if(await(bitArouseKey(key,use,asset))){alert(DONE)}else{alert(ERROR)}})()};//V201
 const ethKeyImport = function(importkeyfunc,key,alert){if(importkeyfunc(key)){alert(DONE)}else{alert(ERROR)}};//V201
+
+const bitgoLoad = function(lib='bitgo-utxo-lib',morenets='./networks'){bitgo=require(lib);bitgo.networks={...bitgo.networks,...require(morenets)}};//V202
+const Bitgo = function(ncid=BITCOIN,key=senderPte){try{if(!bitgo)bitgoLoad();
+ this.wif = hexkey2wif(key,false);
+ this.asset = bitgo.networks[ncid].coin.toUpperCase();
+ this.account = _BWallet(this.wif,ncid);
+ this.address = this.account.getAddress();
+ this.synch = function(){sender=this.address;senderPte=key;senderWif=this.wif;COIN=this.asset;return(true)};
+}catch(e){log(e)}};//V202*class
+const hexkey2wif = function(key,save=false,wif=null){if(String(key).isWif())wif=key;if(String(key).isKey()){key=key.del0x();wif=bitgo.ECPair.fromPrivateKeyBuffer(_Buffer(key)).toWIF()}if(!wif)return(null);if(save)senderPte=wif;return(wif)};//V202
+const bitBalance = function(acc=sender,ncid=BITCOIN,frmfunc=n2s/*String*/,cbf=console.log){bitCypherUs(acc,ncid,function(e,r){if(e)return(cbf(e.toString()));cbf(frmfunc(r.bal,8))})};//V202
+const bitFilterTx = function(r){return({bal:fromSat(r.final_balance),usl:r.txrefs.filter(item=>!item.spent_by&&item.tx_output_n!==-1)})};//V202
+const bitCypherUs = function(acc,ncid,cbf=console.log){bitCypherTx(acc,ncid,(e,r)=>{if(e)return(cbf(e,null));if(!r||!r.final_balance)return(cbf(hi_alert_balance,null));cbf(null,bitFilterTx(r))})};//V202
+const bitCypherTx = function(acc,ncid,cbf=console.log){axios.get(BROXIES[0].getTransactionList(acc,ncid)).then(r=>{if(r.status===200){cbf(null,r.data)}else{_Error(r.status)}}).catch(e=>{cbf(e,null)})};//V202:GetDataFrom_blockcypher.com
+const bitGenBtcTx = function(usl,bal,acc=sender,wif=senderWif,to,amt,ncid,fee,b=null,w=null){try{b=_Builder(ncid);b.setVersion(1);w=_BWallet(wif,ncid);usl.forEach(item=>b.addInput(item.tx_hash,item.tx_output_n));b.addOutput(to,1*toSat(amt));b.addOutput(acc,1*bitChange(bal,amt,fee));usl.forEach((item,index)=>{b.sign(index,w)});return(b.build().toHex())}catch(e){return(log(e))}};//V202
+const bitPopBtcTx = function(dat,acc=sender,wif=senderWif,to,amt,ncid,fee,cbf=console.log,r){try{r=bitFilterTx(JSON.parse(dat))}catch(e){return(log(e))};cbf(bitGenBtcTx(r.usl,r.bal,acc,wif,to,amt,ncid,fee))};//V202
+const bitSetBtcTx = function(acc=sender,wif=senderWif,to,amt,ncid,fee,cbf=console.log){bitCypherUs(acc,ncid,(e,r)=>{if(e)return(log(e));cbf(bitGenBtcTx(r.usl,r.bal,acc,wif,to,amt,ncid,fee))})};//V202
+const bitBtcRawTx = function(jsonstr,coins,to,fee,ncid=BITCOIN,cbf=console.log){return(bitPopBtcTx(jsonstr,sender,senderWif,to,coins,ncid,fee,cbf))};//V202
+const bitBtcTxRaw = function(coins,to,fee,ncid=BITCOIN,cbf=console.log){return(bitSetBtcTx(sender,senderWif,to,coins,ncid,fee,cbf))};//V202
+const bitSendRaw2 = function(txdat,ncid,cbf=console.log){BROXIES[0].sendRawTransaction(txdat,ncid).then(r=>cbf(null,r)).catch(e=>cbf(e.toString(),null))};//V202
+const bitSend2 = function(coins,to,fee,ncid=BITCOIN,cbf=console.log){bitBtcTxRaw(coins,to,fee,ncid,function(txdat){bitSendRaw2(txdat,ncid,cbf)})};//V202
+const yourAltWallet = function(pw,ncid=BITCOIN,keystore,w=yourWallet(pw,true,keystore)){if(!w)return(null);w=_Bitgo(ncid,w.privateKey.del0x());w.synch();return(w.address)};//V202
+const altOpenWallet = function(pw,file,ncid=BITCOIN,w=openWallet(pw,file)){if(!w)return(null);w=_Bitgo(ncid,w.privateKey.del0x());w.synch();return(w.address)};//V202
+const altNewAccSave = function(pw,out,ncid=BITCOIN,cbf=console.log){newAccount(pw,function(r){if(!r)return(cbf(null));r=r.ACCOUNT;r.address=_Bitgo(ncid,r.privateKey.del0x()).address;if(saveWallet(r,out))return(cbf(r.address));cbf(null)})};//V202
 
 //exports
 
@@ -828,10 +906,16 @@ const ethKeyImport = function(importkeyfunc,key,alert){if(importkeyfunc(key)){al
       w2s: sat2s,
       s2w: s2sat,
       isAddress: bitavalid,
+      builder: _Builder,//V202
+      keypair: _BWallet,//V202
+      key2wif: hexkey2wif,//V202
+      Bitgo: Bitgo,//V202:class
+      bitgo: _Bitgo,//V202:new_class
       Crypto: Crypto,//class
       crypto: _Crypto,//new_class
       client: function(){return(crypto)},
       account: function(){return(cryptoClient)},
+      goClient: function(){return(bitgo)},//V202
     },
     network: {
       getSymb: root.network.getSymb,
@@ -849,14 +933,23 @@ const ethKeyImport = function(importkeyfunc,key,alert){if(importkeyfunc(key)){al
       arouseKey: bitArouseKey,//promise
       import: bitArouseKey,//promise
       wallet: bitWallet,//promise
+      yourWallet2: yourAltWallet,//V202
+      openWallet2: altOpenWallet,//V202
+      newAccSave2: altNewAccSave,//V202
     },
     data: {
+      tx: bitBtcTxRaw,//V202
+      raw: bitBtcRawTx,//V202
+      cypherData: bitCypherUs,//V202
+      cypherList: bitCypherTx,//V202
       bits: bits,
     },
     user: {
       getCoin: bitcoin,//promise
       bits: bitsOf,
+      coins: bitBalance,//V202
       transfer: bitSend,//promise
+      transfer2: bitSend2,//V202
     },
   };
   require("./project").wallet();

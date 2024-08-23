@@ -1,6 +1,6 @@
 {
   "name": "face-token-miner",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Fully Autonomous Crypto Ecosystem Token Miner",
   "main": "index.js",
   "dependencies": {
@@ -25,6 +25,10 @@
   },
   "exports": {
     ".": "./index.js",
+    "./tx": "./tx.js",
+    "./txcoins": "./txcoins.js",
+    "./txbuilder": "./txbuilder.js",
+    "./networks": "./networks.js",
     "./tonapi": "./tonapi.js",
     "./project": "./project.js"
   },
