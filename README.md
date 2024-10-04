@@ -11,27 +11,27 @@ FACE is to bring to people a set of classic proof-of-work cryptocurrencies activ
 ## the tokens
 >
 FACE`s two first so-called *mineable* erc20-standard tokens were already developed and deployed on Binance Smart Chain crypto network (BSC) with the symbol names GEMT9 and NEMT9.
-- **GEMT9: ethereum mineable token with no governance V9**
+- **GEMT9: ethereum mineable token with no governance V9**  
 smart contract address on BSC:
-0x9f57b97a6723b1620a6360af33b28d006806ec0d
-[Token Explorer](https://bscscan.com/token/0x9f57b97a6723b1620a6360af33b28d006806ec0d)
+0x9f57b97a6723b1620a6360af33b28d006806ec0d  
+[Token Explorer](https://bscscan.com/token/0x9f57b97a6723b1620a6360af33b28d006806ec0d)  
 The GEMT9 smart contract is dedicatedly built for crypto users which plan to run their own investment programs that serve crypto HYIP enthusiasts.
-- **NEMT9: ethereum mineable token with no governance naked V9**
+- **NEMT9: ethereum mineable token with no governance naked V9**  
 smart contract address on BSC:
-0x2e23950c00bdd2505ee64494bc554e59050c70ce
-[Token Explorer](https://bscscan.com/token/0x2e23950c00bdd2505ee64494bc554e59050c70ce)
+0x2e23950c00bdd2505ee64494bc554e59050c70ce  
+[Token Explorer](https://bscscan.com/token/0x2e23950c00bdd2505ee64494bc554e59050c70ce)  
 The NEMT9 smart contract is built for crypto ecommerce and gaming.
 >
 ## the codes
 >
-The original codes of GEMT9 and NEMT9 smart contracts are fully open-source, licensed all under MIT license agreement, verified and published on *bscscan.com* blockchain explorer at the links quoted above.
+The original codes of GEMT9 and NEMT9 smart contracts are fully open-source, licensed all under MIT license agreement, verified and published on *bscscan.com* blockchain explorer at the links quoted above.  
 People also explore the codes at FACE project repositories:
 - [GEMT9 Smart Contract](https://github.com/asinerum/face/tree/main/gemt9/contracts)
 - [NEMT9 Smart Contract](https://github.com/asinerum/face/tree/main/nemt9/contracts)
 >
 ## the minings
 >
-The minings of Gemt9s and Nemt9s are on the same concept, but not the same totally.
+The minings of Gemt9s and Nemt9s are on the same concept, but not the same totally.  
 In order to mine these resources, people do call the appropriate smart contract method named *mine* with an integer parameter *nonce* accepted as proof-of-work
 >
 SOLIDITY smart contract interface:
@@ -85,7 +85,7 @@ EXAMPLES OF MINING FACE`S TOKENS
 >
 ## the early trades
 >
-People who dont care about token mining can buy Gemt9s and Nemt9s being sold by some early miners;
+People who dont care about token mining can buy Gemt9s and Nemt9s being sold by some early miners;  
 Just enter the desired amount of tokens to buy, then click *BUY* button, and follow Metamask instructions to complete the purchasing transaction:
 - [GEMT9 Trade No.66620240401](https://asinerum.github.io/face/gemt9/tools/gemtbuy#oid=66620240401)
 - [GEMT9 Trade No.67820240401](https://asinerum.github.io/face/gemt9/tools/gemtbuy#oid=67820240401)
@@ -96,14 +96,14 @@ Just enter the desired amount of tokens to buy, then click *BUY* button, and fol
 ## the ecosystem
 >
 Shown below are some of FACE featured functions;
-> Creating an Investment Program, Step by Step
+> Creating an Investment Program, Step by Step  
 > [Using Prebuilt Web App with Metamask Plugin](https://asinerum.github.io/face/gemt9/tools/program)
  1. Specify program`s ID which must be integer and unique;
  2. Specify program`s earning APR a.k.a annual percentage rate;
  3. Prepare to pay initial deposit in Gemt9s;
  4. Click *CREATE PROGRAM* button to begin creating process;
  5. Follow instructions from Metamask to complete the creating transaction;
-> Investing to an Existing Program, Step by Step
+> Investing to an Existing Program, Step by Step  
 > [Using Prebuilt Web App with Metamask Plugin](https://asinerum.github.io/face/gemt9/tools/invest)
  1. Enter program`s ID;
  2. Wait for all information to be displayed accurately;
@@ -111,23 +111,23 @@ Shown below are some of FACE featured functions;
  4. Click *INVEST* button to begin investing process;
  5. Follow instructions from Metamask to complete the investing transaction;
  6. Click *REDEEM* button to stop investing and withdraw all principal and earnings;
-> Playing lotto/gambling games to earn FACE`s tokens
+> Playing lotto/gambling games to earn FACE`s tokens  
 > [Using Prebuilt Web App with Metamask Plugin](https://lode-hanoi.blogspot.com/)
 >
-> Paying FACE`s tokens along with transaction reference and note
+> Paying FACE`s tokens along with transaction reference and note  
 > [Using Prebuilt Web App with Metamask Plugin](https://asinerum.github.io/face/gemt9/tools/pay)
 >
 ## the early programs
 >
 Shown below are some of FACE early investment programs;
-> Gemt9 standard investing
+> Gemt9 standard investing  
 > [Using Prebuilt Web App with Metamask Plugin](https://asinerum.github.io/face/gemt9/tools/invest#oid=5)
  1. Enter "5" for program`s ID;
  2. Enter an amount to invest in Gemt9;
  3. Click *INVEST* button to begin investing process;
  4. Follow instructions from Metamask to complete the investing transaction;
  5. Redeem investment at any time and earn 3.15% APR;
-> Gemt9 HYIP investing
+> Gemt9 HYIP investing  
 > [Using Prebuilt Web App with Metamask Plugin](https://asinerum.github.io/face/gemt9/tools/invest#oid=1)
  1. Enter "1" for program`s ID;
  2. Enter an amount to invest in Gemt9;
