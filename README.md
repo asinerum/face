@@ -61,6 +61,7 @@ Below are ready-built browser tools for mining FACE`s tokens:
 EXAMPLES OF MINING FACE`S TOKENS
   
 > Using Desktop Browser with Metamask Plugin, Step by Step
+  
  1. On desktop computers, do install any modern browser that supports [Metamask Plugin](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) to enable the most widely acclaimed ethereum hot wallet, the [Metamask Wallet](https://metamask.io);
  2. On mobile devices, using [Kiwi Browser](https://kiwibrowser.com) instead of Chrome/Firefox/Edge is suggested;
  3. Launch the browser, unlock the Metamask wallet, switch to Binance Smart Chain (a.k.a BNB Chain) network;
@@ -76,6 +77,7 @@ EXAMPLES OF MINING FACE`S TOKENS
  13. Wait for token balance updates;
   
 > Using Mobile Browser, Step by Step
+  
  1. Make sure one of the following values is known:
     - miner`s private key, or
     - miner`s KEYSTORE V3, or
@@ -87,6 +89,7 @@ EXAMPLES OF MINING FACE`S TOKENS
  6. Wait for token balance updates;
   
 > Using NodeJS Command Line Interface
+  
  1. [NodeJS CLI Miner V1](https://github.com/asinerum/face/tree/main/CLI/node)
  2. [NodeJS CLI Miner V2](https://github.com/asinerum/face/tree/main/CLI/node2)
   
@@ -106,6 +109,7 @@ Shown below are some of FACE featured functions.
   
 > Creating an Investment Program, Step by Step  
 > [Using Prebuilt Web App with Metamask Plugin](https://asinerum.github.io/face/gemt9/tools/program)
+  
  1. Specify program`s ID which must be integer and unique;
  2. Specify program`s earning APR a.k.a annual percentage rate;
  3. Prepare to pay initial deposit in Gemt9s;
@@ -114,6 +118,7 @@ Shown below are some of FACE featured functions.
   
 > Investing to an Existing Program, Step by Step  
 > [Using Prebuilt Web App with Metamask Plugin](https://asinerum.github.io/face/gemt9/tools/invest)
+  
  1. Enter program`s ID;
  2. Wait for all information to be displayed accurately;
  3. Enter the ideal amount to invest to the program;
@@ -133,6 +138,7 @@ Shown below are some of FACE early investment programs.
   
 > Gemt9 standard investing  
 > [Using Prebuilt Web App with Metamask Plugin](https://asinerum.github.io/face/gemt9/tools/invest#oid=5)
+  
  1. Enter "5" for program`s ID;
  2. Enter an amount to invest in Gemt9;
  3. Click *INVEST* button to begin investing process;
@@ -141,6 +147,7 @@ Shown below are some of FACE early investment programs.
   
 > Gemt9 HYIP investing  
 > [Using Prebuilt Web App with Metamask Plugin](https://asinerum.github.io/face/gemt9/tools/invest#oid=1)
+  
  1. Enter "1" for program`s ID;
  2. Enter an amount to invest in Gemt9;
  3. Click *INVEST* button to begin investing process;
