@@ -117,4 +117,22 @@ Shown below are some of FACE featured functions;
 > Paying FACE`s tokens along with transaction reference and note
 > [Using Prebuilt Web App with Metamask Plugin](https://asinerum.github.io/face/gemt9/tools/pay)
 >
+## the early programs
+>
+Shown below are some of FACE early investment programs;
+> Gemt9 standard investing
+> [Using Prebuilt Web App with Metamask Plugin](https://asinerum.github.io/face/gemt9/tools/invest#oid=5)
+ 1. Enter "5" for program`s ID;
+ 2. Enter an amount to invest in Gemt9;
+ 3. Click *INVEST* button to begin investing process;
+ 4. Follow instructions from Metamask to complete the investing transaction;
+ 5. Redeem investment at any time and earn 3.15% APR;
+> Gemt9 HYIP investing
+> [Using Prebuilt Web App with Metamask Plugin](https://asinerum.github.io/face/gemt9/tools/invest#oid=1)
+ 1. Enter "1" for program`s ID;
+ 2. Enter an amount to invest in Gemt9;
+ 3. Click *INVEST* button to begin investing process;
+ 4. Follow instructions from Metamask to complete the investing transaction;
+ 5. Redeem investment at any time and earn 4998.45% APR;
+>
 (C)2021 ASINERUM PROJECT TEAM
