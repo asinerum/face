@@ -39,7 +39,7 @@
 <script>
 window.onload=function(){
 promoteMenu();
-rpcSelTokens('GEMT9');
+(async()=>{await(rpcSelTokens('GEMT9'));await(dx('pro_invest_id',hashParam('oid')))})();txgwei=0;
 }
 </script>
 </body>
