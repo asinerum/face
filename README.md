@@ -85,7 +85,7 @@ EXAMPLES OF MINING FACE`S TOKENS
 >
 ## the early trades
 >
-People who dont care about token mining can buy Gemt9s and Nemt9s being sold by some early miners;  
+People who dont care about token mining can buy Gemt9s and Nemt9s being sold by some early miners.  
 Just enter the desired amount of tokens to buy, then click *BUY* button, and follow Metamask instructions to complete the purchasing transaction:
 - [GEMT9 Trade No.66620240401](https://asinerum.github.io/face/gemt9/tools/gemtbuy#oid=66620240401)
 - [GEMT9 Trade No.67820240401](https://asinerum.github.io/face/gemt9/tools/gemtbuy#oid=67820240401)
@@ -95,7 +95,7 @@ Just enter the desired amount of tokens to buy, then click *BUY* button, and fol
 >
 ## the ecosystem
 >
-Shown below are some of FACE featured functions;
+Shown below are some of FACE featured functions.
 > Creating an Investment Program, Step by Step  
 > [Using Prebuilt Web App with Metamask Plugin](https://asinerum.github.io/face/gemt9/tools/program)
  1. Specify program`s ID which must be integer and unique;
@@ -113,13 +113,13 @@ Shown below are some of FACE featured functions;
  6. Click *REDEEM* button to stop investing and withdraw all principal and earnings;
 > Playing lotto/gambling games to earn FACE`s tokens  
 > [Using Prebuilt Web App with Metamask Plugin](https://lode-hanoi.blogspot.com/)
->
+  
 > Paying FACE`s tokens along with transaction reference and note  
 > [Using Prebuilt Web App with Metamask Plugin](https://asinerum.github.io/face/gemt9/tools/pay)
 >
 ## the early programs
 >
-Shown below are some of FACE early investment programs;
+Shown below are some of FACE early investment programs.
 > Gemt9 standard investing  
 > [Using Prebuilt Web App with Metamask Plugin](https://asinerum.github.io/face/gemt9/tools/invest#oid=5)
  1. Enter "5" for program`s ID;
