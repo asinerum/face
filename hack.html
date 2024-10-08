@@ -41,8 +41,7 @@
 </div>
 <script>
 window.onload=function(){
-promoteMenu();
-getMetamask(function(){selectTokens('GEMT9')});txgwei=0;
+ loadMenuAndParams({},0,getMetamask,selectTokens,'GEMT9');
 }
 </script>
 </body>
