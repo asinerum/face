@@ -40,8 +40,7 @@
 </div>
 <script>
 window.onload=function(){
-promoteMenu();
-getMetamask(function(){selectTokens('GEMT9');dx('pro_invest_id',hashParam('oid'))});txgwei=0;
+ loadMenuAndParams({pro_invest_id:'oid'},0,getMetamask,selectTokens,'GEMT9');
 }
 </script>
 </body>

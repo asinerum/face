@@ -17,7 +17,7 @@
 <div class="center">
 <div class="vbox">
 <div class="center">
-<span class="vhead" id="_label_hack_panelHeaderLode">JS LODE GAME MACHINE</span>
+<span class="vhead" id="_label_hack_panelHeaderLode">JS LODE GAME</span>
 <br/>
 <br/>
 <div class="center" id="form_head"><div class="forward" data-action="DefiGameLodeLoad" id="_button_refresh"></div></div>
@@ -43,9 +43,8 @@
 </div>
 <script>
 window.onload=function(){
-promoteMenu();
-getMetamask(function(){selectTokens('GEMT9')});txgwei=0;
-CountDown('pro_date','lode_countdown');
+ loadMenuAndParams({},0,getMetamask,selectTokens,'GEMT9');
+ CountDown('pro_date','lode_countdown');
 }
 </script>
 </body>

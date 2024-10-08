@@ -17,7 +17,7 @@
 <div class="center">
 <div class="vbox">
 <div class="center">
-<span class="vhead" id="_label_hack_panelHeaderMine">TOKEN MINING MACHINE</span>
+<span class="vhead" id="_label_hack_panelHeaderMine">MINER'S PANEL</span>
 <br/>
 <br/>
 <div class="center" id="form_head"><div class="forward" data-action="DefiHackProgLoad" id="_button_refresh"></div></div>
@@ -41,8 +41,7 @@
 </div>
 <script>
 window.onload=function(){
-promoteMenu();
-getMetamask(function(){selectTokens('GEMT9')});txgwei=0;
+ loadMenuAndParams({},0,getMetamask,selectTokens,'GEMT9');
 }
 </script>
 </body>

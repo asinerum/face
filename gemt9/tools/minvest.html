@@ -38,8 +38,7 @@
 </div>
 <script>
 window.onload=function(){
-promoteMenu();
-(async()=>{await(rpcSelTokens('GEMT9'));await(dx('pro_invest_id',hashParam('oid')))})();txgwei=0;
+ loadMenuAndParams({pro_invest_id:'oid'},0,false,rpcSelTokens,'GEMT9');
 }
 </script>
 </body>

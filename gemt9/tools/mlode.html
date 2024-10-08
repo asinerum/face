@@ -14,7 +14,7 @@
 <div class="body" id="body">
 <br/>
 <br/>
-<span class="vhead" id="_label_hack_panelHeaderLode">JS LODE GAME MACHINE</span>
+<span class="vhead" id="_label_hack_panelHeaderLode">JS LODE GAME</span>
 <br/>
 <br/>
 <textarea class="vb" placeholder="keystore or private key" id="dig_keystore"></textarea><br/>
@@ -41,9 +41,8 @@
 </div>
 <script>
 window.onload=function(){
-promoteMenu();
-rpcSelTokens('GEMT9');
-CountDown('pro_date','lode_countdown');
+ loadMenuAndParams({},0,false,rpcSelTokens,'GEMT9');
+ CountDown('pro_date','lode_countdown');
 }
 </script>
 </body>
