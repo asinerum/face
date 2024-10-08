@@ -37,8 +37,8 @@
 </div>
 <script>
 window.onload=function(){
-promoteMenu();
-getMetamask(function(){BUYTOKEN=false;selectTokens('NEMT9');dx('pro_buy_id',hashParam('oid'))});txgwei=0;
+ BUYTOKEN=false;
+ loadMenuAndParams({pro_buy_id:'oid'},0,getMetamask,selectTokens,'NEMT9');
 }
 </script>
 </body>
