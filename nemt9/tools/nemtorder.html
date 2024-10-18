@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<html lang="en">
+<head>
+<title>ASINERUM DEFI: TOKEN ORDERING BUYER'S PANEL</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/fonts.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/favicon.ico" rel="icon" type="image/x-icon"/>
+<script src="https://cdn.jsdelivr.net/gh/asinerum/project/base.js"></script>
+</head>
+<body class="group">
+<div class="body" id="body">
+<br/>
+<br/>
+<div class="center">
+<div class="obox">
+<div class="center">
+<span class="ohead" id="_label_order_programer">BUYER'S PANEL</span>
+<br/>
+<br/>
+<div class="center" id="form_head"><div class="cash" data-action="DefiOrderRecv" id="_button_refresh"></div></div>
+<input type="text" class="ob" data-change="DefiOrderIdno" placeholder="Order Unique ID" id="pro_order_id"/><br/>
+<input type="text" class="ob" data-change="DefiOrderRate" placeholder="Coin/Token Rate" id="pro_order_apr"/><br/>
+<input type="text" class="ob" data-change="DefiOrderRvrt" placeholder="Token/Coin Rate" id="pro_order_rev"/><br/>
+<input type="text" class="ob" data-change="DefiOrderSAge" placeholder="Expiration Date" id="pro_order_age"/><br/>
+<input type="text" class="ob" data-change="DefiOrderGemt" placeholder="Tokens for Hold" id="pro_order_gemt"/><br/>
+<input type="text" class="ob" data-change="DefiOrderConv" placeholder="Coins Deposited" id="pro_order_conv"/><br/>
+<div class="obutton" data-action="DefiOrderOpen" id="_button_order_DefiProgOpen">CREATE ORDER</div><br/>
+<div class="obutton" data-action="DefiOrderStop" id="_button_order_DefiProgStop">CANCEL ORDER</div><br/>
+<div class="center" id="form_status"><div class="play" data-action="ClearInput" id="_button_check"></div></div>
+</div>
+</div>
+</div>
+<br/>
+<br/>
+</div>
+<script>
+window.onload=function(){
+ BUYTOKEN=true;
+ loadMenuAndParams({pro_order_id:'oid'},0,getMetamask,selectTokens,'NEMT9');
+}
+</script>
+</body>
+</html>

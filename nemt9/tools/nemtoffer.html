@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<html lang="en">
+<head>
+<title>ASINERUM DEFI: TOKEN OFFERING SELLER'S PANEL</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/fonts.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/gui/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/gh/asinerum/project/favicon.ico" rel="icon" type="image/x-icon"/>
+<script src="https://cdn.jsdelivr.net/gh/asinerum/project/base.js"></script>
+</head>
+<body class="group">
+<div class="body" id="body">
+<br/>
+<br/>
+<div class="center">
+<div class="obox">
+<div class="center">
+<span class="ohead" id="_label_offer_programer">SELLER'S PANEL</span>
+<br/>
+<br/>
+<div class="center" id="form_head"><div class="cash" data-action="DefiOfferRead" id="_button_refresh"></div></div>
+<input type="text" class="ob" data-change="DefiOfferIdno" placeholder="Offer Unique ID" id="pro_offer_id"/><br/>
+<input type="text" class="ob" data-change="DefiOfferRate" placeholder="Coin/Token Rate" id="pro_offer_apr"/><br/>
+<input type="text" class="ob" data-change="DefiOfferRvrt" placeholder="Token/Coin Rate" id="pro_offer_rev"/><br/>
+<input type="text" class="ob" data-change="DefiOfferSAge" placeholder="Expiration Date" id="pro_offer_age"/><br/>
+<input type="text" class="ob" data-change="DefiOfferInit" placeholder="Tokens for Sale" id="pro_offer_gemt"/><br/>
+<div class="obutton" data-action="DefiOfferOpen" id="_button_offer_DefiProgOpen">CREATE OFFER</div><br/>
+<div class="obutton" data-action="DefiOfferStop" id="_button_offer_DefiProgStop">CANCEL OFFER</div><br/>
+<div class="center" id="form_status"><div class="play" data-action="ClearInput" id="_button_check"></div></div>
+</div>
+</div>
+</div>
+<br/>
+<br/>
+</div>
+<script>
+window.onload=function(){
+ BUYTOKEN=false;
+ loadMenuAndParams({pro_offer_id:'oid'},0,getMetamask,selectTokens,'NEMT9');
+}
+</script>
+</body>
+</html>
