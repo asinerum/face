@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.face.tokenminer" version="1.0.0" android-versionCode="10" defaultlocale="en-US" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>FaceTokenMiner</name>
+    <description>F.A.C.E Token Miner Hybrid App made with Apache Cordova</description>
+    <icon src="www/img/miner.png" platform="android" width="57" height="57" density="mdpi"/>
+    <author href="https://github.com/asinerum">
+        Asinerum International Dev Team
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+</widget>
