@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'GARAMOND';
+  src: url('GARA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GARAMOND';
+  src: url('GARABD.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GARAMOND';
+  src: url('GARAIT.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
