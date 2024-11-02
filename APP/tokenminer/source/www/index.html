@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:; connect-src 'self' 'unsafe-inline' 'unsafe-eval' https://bsc-dataseed.binance.org;">
+<meta name="format-detection" content="telephone=no">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+<meta name="color-scheme" content="light grey">
+<link href="css/fonts.css" rel="stylesheet" type="text/css"/>
+<link href="css/bstyle.css" rel="stylesheet" type="text/css"/>
+<link href="img/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>F.A.C.E Token Miner</title>
+</head>
+<body>
+<div class="body" id="body">
+<br/>
+<br/>
+<span class="vhead" id="_label_dig_panelHeader">TOKEN MOBILE MINER</span>
+<br/>
+<br/>
+<div class="center" id="form_head"><div class="forward" data-action="DefiDigLoad" id="_button_refresh"></div></div>
+<textarea class="vb" placeholder="keystore or private key" id="dig_keystore"></textarea><br/>
+<input type="password" class="vb" placeholder="passcode to unlock wallet" id="dig_passcode"/><br/>
+<div class="vbutton" data-action="DefiDigJoin" id="_button_dig_DefiJoin">UNLOCK WALLET</div><br/>
+<div class="ob"><span id="_label_dig_DefiAddress">WALLET</span> <span class="textwarn" id="dig_address">?</span></div>
+<div class="center" id="form_mid1"><div class="pause" data-action="DefiDigLoad" id="_button_reload1"></div></div>
+<select class="vb" data-change="DefiDigLoad" id="dig_token">
+ <option value="token">token to mine</option>
+ <option value="GEMT9">GEMT9</option>
+ <option value="NEMT9">NEMT9</option>
+ <option value="REMT9">REMT9</option>
+ <option value="X">X</option>
+</select><br/>
+<div class="ob"><span id="_label_dig_DefiAmt">BALANCE</span> <span class="textwarn" id="dig_amt">?</span></div>
+<div class="ob"><span id="_label_dig_DefiSum">SUPPLY</span> <span class="textwarn" id="dig_sum">?</span></div>
+<div class="ob"><span id="_label_dig_DefiLastMine">LAST MINE</span> <span class="textwarn" id="dig_mine">?</span></div>
+<div class="ob"><span id="_label_dig_DefiLastRate">MINE DEPTH</span> <span class="textwarn" id="dig_rate">?</span></div>
+<div class="vbutton" data-action="DefiDigLoad" id="_button_dig_DefiLoad">RELOAD STATUS</div><br/>
+<div class="center" id="form_mid2"><div class="tick" data-action="DefiDigLoad" id="_button_reload2"></div></div>
+<div class="vbutton" data-action="DefiDigNonce" id="_button_dig_DefiNonce">CALCULATE NONCE</div><br/>
+<div class="ob"><span id="_label_dig_DefiNonce">NONCE</span> <span class="textwarn" id="dig_nonce">?</span></div>
+<input type="text" class="vb" placeholder="manual nonce" id="dig_in_nonce"/><br/>
+<div class="vbutton" data-action="DefiDigSend" id="_button_dig_DefiSend">MINE WITH NONCE</div><br/>
+<div class="center" id="form_mid3"><div class="close" data-action="DefiDigLoad" id="_button_reload3"></div></div>
+<input type="text" class="vb" placeholder="waiting time (in minutes)" id="dig_wait"/><br/>
+<div class="vbutton" data-action="DefiDigMine" id="_button_dig_DefiMine">MINE AUTOMATICALLY</div><br/>
+<div class="center" id="form_status"><div class="backward" data-action="ClearInput" id="_button_check"></div></div>
+<br/>
+<br/>
+</div>
+<script src="cordova.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/axios.js"></script>
+<script src="js/bip.js"></script>
+<script src="js/qrcode.js"></script>
+<script src="js/web3js.js"></script>
+<script src="js/ethjstx.js"></script>
+<script src="js/xuteng.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
