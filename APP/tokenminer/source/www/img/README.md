@@ -1,0 +1,1 @@
+Cordova Project`s Images
